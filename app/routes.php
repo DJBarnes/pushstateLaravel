@@ -15,3 +15,28 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('roomschedule/classroom', function()
+{
+  return View::make('pages.classroom');
+});
+
+Route::get('roomschedule/computerclassroom', function()
+{
+  return View::make('pages.computerclassroom');
+});
+
+Route::get('roomschedule/breakoutroom', function()
+{
+  return View::make('pages.breakoutroom');
+});
+
+Route::get('roomschedule/specialroom', function()
+{
+  return View::make('pages.specialroom');
+});
+
+Route::controller('roomschedule/data/classroom','ClassroomController');
+Route::controller('roomschedule/data/computerclassroom','ComputerClassroomController');
+Route::controller('roomschedule/data/breakoutroom','BreakoutRoomController');
+Route::controller('roomschedule/data/specialroom','SpecialRoomController');
