@@ -3,7 +3,7 @@ body, html {
           margin: 0;
           -webkit-font-smoothing: antialiased;
           font-weight: 100;
-          background: #aadfeb;
+          background: yellow;
           text-align: center;
           font-family: helvetica;
       }
@@ -13,39 +13,39 @@ body, html {
         float: none;
         list-style: none;
         position: relative;
-        padding: 0;
-        margin: 75px auto;
       }
-      .tabs li{
-        float: left;
-      }
-      .tabs a {
+
+      .tabs li {
+          float: left;
           display: block;
           padding: 10px 20px;
-          border-radius: 2px 2px 0 0;
+          border-radius: 12px;
+          margin-left: 2px;
+          margin-right: 2px;
+          z-index: 1;
+          margin-bottom: -12px;
           color: #08C;
           font-size: 24px;
           font-weight: normal;
           font-family: 'Lily Script One', helveti;
-          background: rgba(255,255,255,0.2);
+          background: #aadfeb;
           cursor: pointer;
           position: relative;
-          top: 3px;
           -webkit-transition: all 0.2s ease-in-out;
           -moz-transition: all 0.2s ease-in-out;
           -o-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
       }
-      .tabs a:hover {
-        background: rgba(255,255,255,0.5);
+      .tabs li:hover {
+        background: #08C;
+        color: white;
         top: 0;
       }
        
       .tab-content{
         clear: left;
         text-align: left;
-        z-index: 2;
-        /*display:none;*/
+        z-index: 5;
         width: 100%;
         font-size: 20px;
         line-height: 140%;
@@ -53,12 +53,17 @@ body, html {
         background: #08C;
         padding: 15px;
         color: white;
-        /*position: absolute;*/
-        top: 53px;
-        left: 0;
+        position: relative;
         box-sizing: border-box;
         -webkit-animation-duration: 0.5s;
         -o-animation-duration: 0.5s;
         -moz-animation-duration: 0.5s;
         animation-duration: 0.5s;
+      }
+
+      li.selectedTab {
+        background-color: #08C;
+        color: white;
+        border-radius: 12px;
+        z-index: 1;
       }

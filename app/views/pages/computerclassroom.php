@@ -9,13 +9,23 @@
 <body>
 <div id="tabsDiv">
   <ul class="tabs">
-    <li><a href="classroom">Classrooms</a></li>
-    <li><a href="computerclassroom">Computer Classrooms</a></li>
-    <li><a href="breakoutroom">Breakout Rooms</a></li>
-    <li><a href="specialroom">Special Rooms</a></li>
+    <li id="classroom" class="classroom">Classrooms</li>
+    <li id="computerclassroom" class="computerclassroom selectedTab">Computer Classrooms</li>
+    <li id="breakoutroom" class="breakoutroom">Breakout Rooms</li>
+    <li id="specialroom" class="specialroom">Special Rooms</li>
   </ul>
   <div id="tabsContent" class="tab-content">
     <p>Computer Classrooms Content</p>
   </div>
 </div>
+<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+<script src="http://underscorejs.org/underscore-min.js"></script>
+<script src="http://backbonejs.org/backbone-min.js"></script>
+<script src="../js/views/breakoutRoomView.js"></script>
+<script src="../js/views/classroomView.js"></script>
+<script src="../js/views/computerClassroomView.js"></script>
+<script src="../js/views/specialRoomView.js"></script>
+<script src="../js/util.js"></script>
+<script src="../js/main.js"></script>
 </body>
+</html>
