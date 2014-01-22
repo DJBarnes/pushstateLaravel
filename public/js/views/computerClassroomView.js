@@ -1,6 +1,7 @@
 window.ComputerClassroomView = Backbone.View.extend({
+
   initialize : function() {
-    this.template = _.template(tpl.get('computerclassroom'));
+    this.template = Handlebars.compile(tpl.get('computerclassroomTab'));
   },
   
   render : function() {

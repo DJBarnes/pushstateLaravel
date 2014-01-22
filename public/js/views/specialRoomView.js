@@ -1,6 +1,7 @@
 window.SpecialRoomView = Backbone.View.extend({
+
   initialize : function() {
-    this.template = _.template(tpl.get('specialroom'));
+    this.template = Handlebars.compile(tpl.get('specialroomTab'));
   },
   
   render : function() {

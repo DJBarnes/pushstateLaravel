@@ -1,6 +1,7 @@
 window.ClassroomView = Backbone.View.extend({
+
   initialize : function() {
-    this.template = _.template(tpl.get('classroom'));
+    this.template = Handlebars.compile(tpl.get('classroomTab'));
   },
   
   render : function() {

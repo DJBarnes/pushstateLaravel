@@ -9,6 +9,7 @@ Backbone.View.prototype.close = function() {
 
 var AppRouter = Backbone.Router.extend({
   initialize : function() {
+    this.contentDiv = new ClassroomView({el:"#tabsDiv"});
   },
 
   routes : {
@@ -43,7 +44,7 @@ var AppRouter = Backbone.Router.extend({
   }
 });
 
-tpl.loadTemplates(['classroom','computerclassroom','breakoutroom','specialroom'], function() {
+tpl.loadTemplates(['classroomTab','computerclassroomTab','breakoutroomTab','specialroomTab'], function() {
   window.app = new AppRouter();
-  var result = Backbone.history.start({pushState: true, root: "/pushstateTest/roomschedule/"});
+  var result = Backbone.history.start({pushState: true, root: "/pushstateTest/roomschedule/", silent:true});
 });

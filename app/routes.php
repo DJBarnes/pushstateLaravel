@@ -18,22 +18,27 @@ Route::get('/', function()
 
 Route::get('roomschedule/classroom', function()
 {
-  return View::make('pages.classroom');
+  //return View::make('pages.classroom');
+  //return View::make('classroom');
+  return View::make('classroom')->nest('classroomTabHolder','classroomTab');
 });
 
 Route::get('roomschedule/computerclassroom', function()
 {
-  return View::make('pages.computerclassroom');
+  //return View::make('pages.computerclassroom');
+  return View::make('computerclassroom')->nest('computerclassroomTabHolder','computerclassroomTab');
 });
 
 Route::get('roomschedule/breakoutroom', function()
 {
-  return View::make('pages.breakoutroom');
+  //return View::make('pages.breakoutroom');
+  return View::make('breakoutroom')->nest('breakoutroomTabHolder','breakoutroomTab');
 });
 
 Route::get('roomschedule/specialroom', function()
 {
-  return View::make('pages.specialroom');
+  //return View::make('pages.specialroom');
+  return View::make('specialroom')->nest('specialroomTabHolder','specialroomTab');
 });
 
 Route::controller('roomschedule/data/classroom','ClassroomController');

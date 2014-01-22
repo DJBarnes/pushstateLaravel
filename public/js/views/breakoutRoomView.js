@@ -1,6 +1,7 @@
 window.BreakoutRoomView = Backbone.View.extend({
+
   initialize : function() {
-    this.template = _.template(tpl.get('breakoutroom'));
+    this.template = Handlebars.compile(tpl.get('breakoutroomTab'));
   },
   
   render : function() {
