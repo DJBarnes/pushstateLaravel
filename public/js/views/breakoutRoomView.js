@@ -5,9 +5,8 @@ window.BreakoutRoomView = Backbone.View.extend({
   },
   
   render : function() {
-    $('#tabsDiv').empty();
     $(this.el).html(this.template());
-    $('#tabsDiv').html(this.el);
+    return this.el;
   },
   
   events : {

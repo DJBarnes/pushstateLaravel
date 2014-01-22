@@ -22,25 +22,25 @@ var AppRouter = Backbone.Router.extend({
   classroom : function() {
     //console.log("classroom");
     this.contentDiv = new ClassroomView({});
-    this.contentDiv.render();
+    $('#tabsDiv').html(this.contentDiv.render());
   },
 
   computerclassroom : function() {
     //console.log("computer classroom");
     this.contentDiv = new ComputerClassroomView({});
-    this.contentDiv.render();
+    $('#tabsDiv').html(this.contentDiv.render());
   },
 
   breakoutroom : function() {
     //console.log("breakout room");
     this.contentDiv = new BreakoutRoomView({});
-    this.contentDiv.render();
+    $('#tabsDiv').html(this.contentDiv.render());
   },
 
   specialroom : function() {
     //console.log("special room");
     this.contentDiv = new SpecialRoomView({});
-    this.contentDiv.render();
+    $('#tabsDiv').html(this.contentDiv.render());
   }
 });
 
