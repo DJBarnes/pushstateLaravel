@@ -17,18 +17,18 @@ window.SpecialRoomView = Backbone.View.extend({
   },
   
   navigateToClassroom : function() {
-    app.navigate('classroom',true);
+    RoomTabsMVC.navigate('classroom',true);
   },
 
   navigateToComputerClassroom : function() {
-    app.navigate('computerclassroom',true);
+    RoomTabsMVC.navigate('computerclassroom',true);
   },
 
   navigateToBreakoutRoom : function() {
-    app.navigate('breakoutroom',true);
+    RoomTabsMVC.navigate('breakoutroom',true);
   },
 
   navigateToSpecialRoom : function() {
-    app.navigate('specialroom',true);
+    RoomTabsMVC.navigate('specialroom',true);
   }
 });
