@@ -27,22 +27,22 @@ RoomTabsMVC.module('RoomTabsList', function (RoomTabsList, App, Backbone, Marion
 
   var RoomController = {
     classroom : function() {
-      var contentDiv = new ClassroomView({});
+      var contentDiv = new RoomView({'tabName':'classroomTab'});
       App.tabContent.show(contentDiv);
     },
 
     computerclassroom : function() {
-      var contentDiv = new ComputerClassroomView({});
+      var contentDiv = new RoomView({'tabName':'computerclassroomTab'});
       App.tabContent.show(contentDiv);
     },
 
     breakoutroom : function() {
-      var contentDiv = new BreakoutRoomView({});
+      var contentDiv = new RoomView({'tabName':'breakoutroomTab'});
       App.tabContent.show(contentDiv);
     },
 
     specialroom : function() {
-      var contentDiv = new SpecialRoomView({});
+      var contentDiv = new RoomView({'tabName':'specialroomTab'});
       App.tabContent.show(contentDiv);
     }
   };
