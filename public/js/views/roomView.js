@@ -1,13 +1,8 @@
-window.RoomView = Backbone.View.extend({
+window.RoomView = Backbone.Marionette.ItemView.extend({
 
   initialize : function(options) {
-    this.options = options;
+    this.options = options || {};
     this.template = Handlebars.compile(tpl.get(this.options.tabName));
-  },
-  
-  render : function() {
-    $(this.el).html(this.template());
-    return this.el;
   },
   
   events : {
