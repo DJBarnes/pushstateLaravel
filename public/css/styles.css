@@ -3,9 +3,17 @@ body, html {
           margin: 0;
           -webkit-font-smoothing: antialiased;
           font-weight: 100;
-          background: yellow;
           text-align: center;
           font-family: helvetica;
+
+          background: rgb(51,25,0); /* Old browsers */
+          background: -moz-linear-gradient(top,  rgba(51,25,0,1) 0%, rgba(102,51,0,1) 83%); /* FF3.6+ */
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(51,25,0,1)), color-stop(83%,rgba(102,51,0,1))); /* Chrome,Safari4+ */
+          background: -webkit-linear-gradient(top,  rgba(51,25,0,1) 0%,rgba(102,51,0,1) 83%); /* Chrome10+,Safari5.1+ */
+          background: -o-linear-gradient(top,  rgba(51,25,0,1) 0%,rgba(102,51,0,1) 83%); /* Opera 11.10+ */
+          background: -ms-linear-gradient(top,  rgba(51,25,0,1) 0%,rgba(102,51,0,1) 83%); /* IE10+ */
+          background: linear-gradient(to bottom,  rgba(51,25,0,1) 0%,rgba(102,51,0,1) 83%); /* W3C */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#331900', endColorstr='#663300',GradientType=0 ); /* IE6-9 */
       }
        
       .tabs {
@@ -16,29 +24,33 @@ body, html {
       }
 
       .tabs li {
+
           float: left;
           display: block;
           padding: 10px 20px;
-          border-radius: 12px;
+          border-top-left-radius: 12px;
+          border-top-right-radius: 12px;
+          border-bottom-left-radius: 0px;
+          border-bottom-right-radius: 0px;
           margin-left: 2px;
           margin-right: 2px;
           z-index: 1;
-          margin-bottom: -12px;
-          color: #08C;
-          font-size: 24px;
+          margin-bottom: -6px;
+          color: #331900;
+          font: 16px Tahoma, Arial;
           font-weight: normal;
-          font-family: 'Lily Script One', helveti;
-          background: #aadfeb;
+          background: #d4b77d;
           cursor: pointer;
           position: relative;
           -webkit-transition: all 0.2s ease-in-out;
           -moz-transition: all 0.2s ease-in-out;
           -o-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
+          
       }
       .tabs li:hover {
-        background: #08C;
-        color: white;
+        background: #ebd29b;
+        color: #331900;
         top: 0;
       }
        
@@ -50,9 +62,9 @@ body, html {
         font-size: 20px;
         line-height: 140%;
         padding-top: 10px;
-        background: #08C;
+        background: #ebd29b;
         padding: 15px;
-        color: white;
+        color: #331900;
         position: relative;
         box-sizing: border-box;
         -webkit-animation-duration: 0.5s;
@@ -62,8 +74,11 @@ body, html {
       }
 
       li.selectedTab {
-        background-color: #08C;
-        color: white;
-        border-radius: 12px;
+        background-color: #ebd29b;
+        color: #331900;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
         z-index: 1;
       }
